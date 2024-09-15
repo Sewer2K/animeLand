@@ -1,6 +1,6 @@
-const withPWA=require('next-pwa')
+const withPWA = require('next-pwa');
 module.exports = withPWA({
-  pwa:{dest:'public'},
+  pwa: { dest: 'public' },
   webpack: (config, { isServer }) => {
     // Fixes packages that depend on fs/module module
     config.module.rules.push({
@@ -22,6 +22,6 @@ module.exports = withPWA({
   },
   env: {
     key: process.env.COUNT_API_KEY,
-    URL: process.env.BASE_URL,
+    URL: "https://7f86-197-87-206-82.ngrok-free.app/api/",
   },
 });
